@@ -25,32 +25,37 @@ import lombok.RequiredArgsConstructor;
 @RequestMapping("/ddimap")
 public class MapController {
 
-	private final SpaceService spaceService;
+	// private final SpaceService spaceService;
 
 	@GetMapping
-	public String ddimap(Model model, Pageable pageable) {
-		List<SpaceVo> mapSpaceList = new ArrayList<>();
-		mapSpaceList = spaceService.findDefaultList();
-		model.addAttribute("data", mapSpaceList);
-
+	public String ddimap() {
 		return "user/map/spaceMap";
 	}
+	
+	// @GetMapping
+	// public String ddimap(Model model, Pageable pageable) {
+	// 	List<SpaceVo> mapSpaceList = new ArrayList<>();
+	// 	mapSpaceList = spaceService.findDefaultList();
+	// 	model.addAttribute("data", mapSpaceList);
 
-	@GetMapping("/search")
-	public String searchData(Model model, @RequestParam(name = "type", required = true) String type,
-			@RequestParam(name = "pay", required = false) String pay,
-			@RequestParam(name = "region", required = false) String region,
-			@RequestParam(name = "spaceNm", required = false) String spaceNm) {
+	// 	return "user/map/spaceMap";
+	// }
 
-		model.addAttribute("type", type);
-		model.addAttribute("pay", pay);
-		model.addAttribute("region", region);
-		model.addAttribute("spaceNm", spaceNm);
+	// @GetMapping("/search")
+	// public String searchData(Model model, @RequestParam(name = "type", required = true) String type,
+	// 		@RequestParam(name = "pay", required = false) String pay,
+	// 		@RequestParam(name = "region", required = false) String region,
+	// 		@RequestParam(name = "spaceNm", required = false) String spaceNm) {
+
+	// 	model.addAttribute("type", type);
+	// 	model.addAttribute("pay", pay);
+	// 	model.addAttribute("region", region);
+	// 	model.addAttribute("spaceNm", spaceNm);
 		
-		List<SpaceVo> searchResults = spaceService.searchMapByCriteria(type, pay, region, spaceNm);
-		model.addAttribute("data", searchResults);
+	// 	List<SpaceVo> searchResults = spaceService.searchMapByCriteria(type, pay, region, spaceNm);
+	// 	model.addAttribute("data", searchResults);
 
-		return "user/map/spaceMap";
-	}
+	// 	return "user/map/spaceMap";
+	// }
 
 }
