@@ -271,7 +271,7 @@ public class SpaceService {
 
 		try {
 			JSONObject obj = new JSONObject();
-			obj.put("numOfRows", 1000);
+			obj.put("numOfRows", 100);
 			obj.put("pageNo", 1);
 
 			CloseableHttpClient client = HttpClientBuilder.create().build();
