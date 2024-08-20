@@ -116,14 +116,13 @@
 												style="width: 12px; display: block;">
 										</div>
 										<div class="col"
-											style="font-size: 15px; line-height: 35px; padding-left: 5px;">
-											<span
-												th:text="${#strings.length(data.addr) &lt;= 20 ? data.addr : #strings.substring(data.addr, 0, 20) + '...'}"></span>
+											style="font-size: 15px; line-height: 35px; padding-left: 5px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+											<span th:text="${#strings.length(data.addr) &lt;= 20 ? data.addr : #strings.substring(data.addr, 0, 20) + '...'}"></span>
 										</div>
 									</div>
 									<div class="row d-flex align-items-flex-end">
 										<div class="col-5"
-											style="color: #37745B; font-size: 17px; max-width: 200px; text-align: left; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+											style="color: #37745B; font-size: 17px; max-width: 200px; text-align: left;">
 											예약 문의</div>
 										<div class="col" style="font-size: 15px;">/ 60분</div>
 										<div class="col"
