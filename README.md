@@ -1,7 +1,7 @@
 <img src="https://github.com/cpcpcool/ddida/assets/143718896/ac22e037-bd62-413e-a0be-bf23d7954282" width="450" >
 <br><br>
 
-### 배포 주소 : http://3.34.49.62:9999
+### 배포 주소 : http://52.78.214.5:9999/
 #### 기본 관리자 아이디 / 비밀번호 : admin / 11
 #### 기본 이용자 아이디 / 비밀번호 : user1 / 11
 
